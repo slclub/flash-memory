@@ -45,9 +45,9 @@ The simplest flash can use any project.
     console.log('%j', memory().cc(cc).get('bx'));
  
 # API
-以下api种参数
+以下api参数
 
-key: String 可以用"."来分隔表示模块对象。
+key: 字符串类型(String) 可以用"."来分隔表示模块对象。
 
 ### get(key [, defaultValue = false)
 获取key对应的闪存内的值，如果找不到 用defaultValue替换，以免出现 define, Nan,Null 等特殊值.
@@ -57,6 +57,11 @@ key: String 可以用"."来分隔表示模块对象。
     key = 'config.host';
     
     value 键对应的值
+### mutiladd(obj)
+
+obj:对象类型({}) ,普通对象按键值分模块放入内存中
+ 
+### mutiladd(obj)
 ### mutiladd(obj)
 按obj对象的键名自动添加
 ### del(key)

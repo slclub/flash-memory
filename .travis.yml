@@ -1,0 +1,7 @@
+language:node_js
+node_js:
+    - "0.10"
+    - "7.2"
+    - "6.8"
+services:
+    - flash

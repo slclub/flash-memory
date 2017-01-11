@@ -1,0 +1,24 @@
+{
+  "name": "flash-memory",
+  "version": "1.0.0",
+  "description": "node flash memory ",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slclub/flash-memory.git"
+  },
+  "keywords": [
+    "node",
+    "flash",
+    "memory"
+  ],
+  "author": "xu yajun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slclub/flash-memory/issues"
+  },
+  "homepage": "https://github.com/slclub/flash-memory#readme"
+}

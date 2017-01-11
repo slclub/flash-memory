@@ -6,9 +6,10 @@
  flash.add('fu.let.xcc', '23');
  flash.add('fu.cx.dfdf', '0232k');
  console.log('%j', memory());
- console.log(memory().get('fu.let'));
+ let cc = memory().get('fu.let');
+ console.log(cc);
  flash.del('fu.let', 'dfdf');
- console.log('%j', memory());
+ console.log('%j', memory().cc(cc).get('bx'));
 
 
 

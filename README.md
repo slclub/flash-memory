@@ -1,9 +1,11 @@
 # flash-memory
 The simplest flash can use any project. 
+
 它是一个全局对象,主要管理主线程内使用的数据。如配置文件，登录用户的详细信息（一般不会放在session内的）。使用它的好处就是只用从系统资源里取一次其它时候使用都是直接从内存中直接取。
+
 # Installation
 
-    npm install flash-memory
+    npm install flash-memory
     
 # Usage
     
@@ -44,18 +46,20 @@ The simplest flash can use any project.
  
 # API
 以下api种参数
+
 key: String 可以用"."来分隔表示模块对象。
 
-## get(key [, defaultValue = false)
+### get(key [, defaultValue = false)
 获取key对应的闪存内的值，如果找不到 用defaultValue替换，以免出现 define, Nan,Null 等特殊值.
 
-## add(key, value)
+### add(key, value)
     key 设置的键要是按模块去划分;请用逗号分隔
     key = 'config.host';
     
     value 键对应的值
-## mutiladd(obj)
+### mutiladd(obj)
 按obj对象的键名自动添加
-## del(key)
-## cc(obj = {})
+### del(key)
+从内存中将该模块的数据销毁.
+### cc(obj = {})
 转换普通数据为闪存对象 只是使用flash的方法。

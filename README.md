@@ -11,7 +11,7 @@ The simplest flash can use any project.
     
     var memory = require('../lib/memory');
 
-    var flash = memory();
+    var flash = memory(false/true);
 
     flash.add('fu.bx', 1);
 
@@ -31,23 +31,24 @@ The simplest flash can use any project.
     flash.add('fu.let.val2', 'v2');
     flash.add('fu.cx.dfdf', '0232k');
 
-    //下面2行输出是一样的,他们相等.
-    console.log('%j', memory());
-    console.log('%j', flash);
-
     // 给获取的数据对象 附上闪存对象的方法.
-    let cc = memory().get('fu.let');
+    let cc = flash.get('fu.let');
     let fcc = flash.cc(cc);
     let vals = fcc.get('*');
 
     //销毁内存中的模块对象.
     flash.del('fu.let');
-    console.log('%j', memory().cc(cc).get('bx'));
+    console.log('%j', flash.cc(cc).get('bx'));
  
 # API
 以下api参数
 
 key: 字符串类型(String) 可以用"."来分隔表示模块对象。
+
+    var memory = require('flash-memory');
+    var flash = memory(false/true);
+    //false : 禁用全局单例
+    //true:启用全局单例.
 
 ### get(key [, defaultValue = false)
 获取key对应的闪存内的值，如果找不到 用defaultValue替换，以免出现 define, Nan,Null 等特殊值.
@@ -67,3 +68,5 @@ obj:对象类型({}) ,普通对象按键值分模块放入内存中
 从内存中将该模块的数据销毁.
 ### cc(obj = {})
 转换普通数据为闪存对象 只是使用flash的方法。
+### clear()
+清除

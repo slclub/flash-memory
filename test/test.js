@@ -34,4 +34,4 @@ flash.del('fu.let');
 console.log('%j', memory().cc(cc).get('bx'));
 
 
-
+flash.clear();
